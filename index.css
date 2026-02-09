@@ -1,0 +1,174 @@
+@import "compass/css3";
+
+
+body {
+  font-size: 16px;
+  color: #ffffff;
+  background: #2F2D2C;
+}
+a {
+  color: #ae05cf;
+  text-decoration: none;
+  transition: ease 0.3s 0;
+}
+a:hover {
+  color: #470044;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Cabin', 'sans-serif';
+	text-transform: uppercase;
+}
+.initial {
+  font-family: 'Cabin', 'sans-serif';
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #fff;
+  font-weight: 15;
+}
+.logo {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto 0;
+  background: #000000;
+  border-radius: 50%;
+  text-align: center;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+ 
+	h2 {
+    margin-left: 5px;
+    line-height: 100px;
+    font-size: 5.35em;
+    font-family: 'Cabin', 'sans-serif';
+    font-weight: 600;
+    color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+	
+  a {
+      padding: 15px;
+  }
+}
+.logo:after {
+  content: "";
+  position: absolute;
+  top: 89%;
+  left: 16%;
+  border-left: 12px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid rgba(0, 0, 0, 0);
+  transform: rotate 31px;
+  -ms-transform: rotate(31deg);
+  -webkit-transform: rotate(31deg);
+  transform: rotate(31deg);
+}
+.name {
+  margin: 7em 0 0.5em;
+  font-size: 17px;
+  font-family: 'Cabin', 'sans-serif';
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 3px;
+}
+.h3 {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px; 
+  color: #fff;
+}
+.about {
+  margin: 0 auto;
+  width: 200px;
+  line-height: 16px;
+}
+.contact-info {
+  line-height: 160px;
+}
+.info {
+  justify-self: center;
+  padding-left: 10%;
+  width: 427px;
+  font-family: 'Cabin', 'sans-serif';
+  margin-bottom: 1em;
+}
+/* Rules for the cards  */
+/* Credit: http://davidwalsh.name/css-flip */
+/* entire container, keeps perspective */
+.wrapper, .card-front, .card-back {
+  margin-top: 25%;
+  width: 427px;
+  height: 320px;
+}
+.wrapper {
+  margin: 1em auto;
+  perspective: 1000; 
+}
+/* Flip the pane when hovered */
+.wrapper:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+/* Flip speed and styling. */
+.flipper {
+  position: relative;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+}
+/* Hide back of pane during swap */
+.card-front, .card-back {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  backface-visibility: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+/* Front pane, placed above back */
+.card-front {
+  z-index: 2;
+  background: #788a75;
+}
+
+.card-front p{
+  position: relative;
+  top: 10%;
+}
+/* back, initially hidden pane */
+.card-back {
+  transform: rotateY(180deg);
+  background: #db6cb0;
+  color: #ae05cf;
+}
+.oval {
+  position: relative;
+  top: 10%;
+  margin: auto;
+  width: 55px;
+  height: 25px;
+  background: #2F2D2C;
+  -moz-border-radius: 60px / 25px;
+  -webkit-border-radius: 60px / 25px;
+  border-radius: 55px / 25px;
+  animation: shadow 2s infinite;
+  -webkit-animation: shadow 2s infinite;
+}
+@-webkit-keyframes bounce {
+  0%   { margin-top: 15px; margin-bottom: 10px; }
+  50%  { margin-top: 22px; margin-bottom: 3px; }
+  100% { margin-top: 15px; margin-bottom: 10px; }
+}
+@keyframes bounce {
+  0%   { margin-top: 15px; margin-bottom: 10px; }
+  50%  { margin-top: 22px; margin-bottom: 3px; }
+  100% { margin-top: 15px; margin-bottom: 10px; }
+}
+@-webkit-keyframes shadow {
+  0%   { padding: 1px; opacity: 0.10; }
+  50%  { padding: 3px; opacity: 0.18; }
+  100% { padding: 1px; opacity: 0.10; }
+}
+@keyframes shadow {
+  0%   { padding: 1px; opacity: 0.10; }
+  50%  { padding: 3px; opacity: 0.18; }
+  100% { padding: 1px; opacity: 0.10; }
+}
